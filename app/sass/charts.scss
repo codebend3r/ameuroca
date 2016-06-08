@@ -1,0 +1,233 @@
+$chartColor1: #dd0000;
+$chartColor2: #00b00d;
+$chartColor3: #0D58A8;
+$chartColor4: #00ffd9;
+$chartColor5: #fa6f12;
+$chartColor6: #A35AF2;
+
+/////////////////////
+// FOR CHARTS
+/////////////////////
+
+.ct-tooltip {
+  background: #FFE50C;
+  border: 2px solid #3B414B;
+  color: #3b414b;
+  font-size: 14px;
+  padding: 5px;
+  position: absolute;
+  width: 150px;
+  height: auto;
+  text-align: center;
+}
+
+.ct-tooltip:after, .ct-tooltip:before {
+  top: 100%;
+  left: 50%;
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+}
+
+.ct-tooltip:after {
+  border-color: rgba(255, 229, 12, 0);
+  border-top-color: #FFE50C;
+  border-width: 5px;
+  margin-left: -5px;
+}
+
+.ct-tooltip:before {
+  border-color: rgba(59, 65, 75, 0);
+  border-top-color: #3B414B;
+  border-width: 8px;
+  margin-left: -8px;
+}
+
+.ct-chart, .sick-line-chart {
+  position: static;
+  margin-left: -50px;
+  .sick-series {
+    .ct-point {
+      stroke-width: 5px;
+    }
+  }
+}
+
+.sick-line {
+  stroke-width: 2px;
+}
+
+.sick-chart-line {
+  .sick-series {
+    &.shots {
+      .ct-line {
+        stroke: #ff8b23;
+      }
+    }
+    &.shotsOnGoal {
+      .ct-line {
+        stroke: #ff6a88;
+      }
+    }
+    &.goals {
+      .ct-line {
+        stroke: #00ff5f;
+      }
+    }
+  }
+}
+
+.sick-series {
+  &:nth-child(1) {
+    // chester
+    .ct-line, .ct-point {
+      stroke: $chartColor1;
+    }
+  }
+  &:nth-child(2) {
+    // dan
+    .ct-line, .ct-point {
+      stroke: $chartColor3;
+    }
+  }
+  &:nth-child(3) {
+    // frank
+    .ct-line, .ct-point {
+      stroke: $chartColor2;
+    }
+  }
+  &:nth-child(4) {
+    // joe
+    .ct-line, .ct-point {
+      stroke: $chartColor6;
+    }
+  }
+  &:nth-child(5) {
+    // justin
+    .ct-line, .ct-point {
+      stroke: $chartColor4;
+    }
+  }
+  &:nth-child(6) {
+    // mike
+    .ct-line, .ct-point {
+      stroke: $chartColor5;
+    }
+  }
+}
+
+/////////////////////
+
+svg.dot-container {
+  padding: 0 20px 0 0;
+  .dot {
+    &.shots {
+      fill: #ff8b23;
+    }
+    &.shots-on-goal {
+      fill: #ff6a88;
+    }
+    &.goals {
+      fill: #00ff5f;
+    }
+  }
+}
+
+.legend {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  div {
+    display: inline-block;
+    line-height: 30px;
+    height: 30px;
+    vertical-align: middle;
+    padding: 2px 10px;
+    &.manager-chester {
+      circle.manager-circle {
+        fill: $chartColor1;
+      }
+    }
+
+    &.manager-frank {
+      circle.manager-circle {
+        fill: $chartColor2;
+      }
+    }
+
+    &.manager-dan {
+      circle.manager-circle {
+        fill: $chartColor3;
+      }
+    }
+
+    &.manager-justin {
+      circle.manager-circle {
+        fill: $chartColor4;
+      }
+    }
+
+    &.manager-mike {
+      circle.manager-circle {
+        fill: $chartColor5;
+      }
+    }
+
+    &.manager-joe {
+      circle.manager-circle {
+        fill: $chartColor6;
+      }
+    }
+  }
+}
+
+.table {
+
+  .manager-row {
+
+    .manager-name {
+      font-weight: bold;
+    }
+
+    .manager-chester {
+      circle.manager-circle {
+        fill: $chartColor1;
+      }
+    }
+
+    .manager-frank {
+      circle.manager-circle {
+        fill: $chartColor2;
+      }
+    }
+
+    .manager-dan {
+      circle.manager-circle {
+        fill: $chartColor3;
+      }
+    }
+
+    .manager-justin {
+      circle.manager-circle {
+        fill: $chartColor4;
+      }
+    }
+
+    .manager-mike {
+      circle.manager-circle {
+        fill: $chartColor5;
+      }
+    }
+
+    .manager-joe {
+      circle.manager-circle {
+        fill: $chartColor6;
+      }
+    }
+
+  }
+
+}

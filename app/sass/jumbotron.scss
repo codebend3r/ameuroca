@@ -1,0 +1,141 @@
+@import 'variables';
+
+.jumbotron.manager-jumbotron {
+  padding: 25px;
+  margin: 0 0 20px 0;
+}
+
+@media (max-width: 700px) {
+
+  .jumbotron.manager-jumbotron {
+    padding: 15px;
+    margin: 0 0 5px 0;
+  }
+
+}
+
+.jumbotron {
+
+  position: relative;
+  padding: 20px;
+  background-color: $mainColour;
+  color: $textColour;
+  overflow: hidden;
+
+  h1 {
+    font-family: 'Lobster', sans-serif;
+    letter-spacing: -2px;
+    font-size: 55px;
+    @media (max-width: 750px) {
+      h1 {
+        font-size: 45px;
+      }
+    }
+    &.player-name {
+      color: $secondaryColour;
+      text-transform: capitalize;
+      //text-decoration: underline;
+      margin: 0;
+      font-size: 50px;
+      line-height: 60px;
+      @media (max-width: 700px) {
+        font-size: 30px;
+        line-height: 40px;
+      }
+    }
+  }
+
+  .player-profile-container {
+    z-index: 100;
+  }
+
+  .background-logo {
+    width: 80px;
+    height: 80px;
+  }
+
+  .pattern {
+    position: absolute;
+    background-image: url(../images/pattern/dimension_@2X.png);
+    background-size: 43px 50px;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 0;
+    opacity: .2;
+  }
+
+  .background-dark {
+    position: absolute;
+    background-color: #333333;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 0;
+    opacity: 1;
+  }
+
+  h3.player-team {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+  }
+
+}
+
+.manager-jumbotron {
+  .profile-pic {
+    width: 100%;
+    height: auto;
+    border: 2px solid $secondaryColour;
+    @media (max-width: 700px) {
+      display: none;
+    }
+  }
+  hr {
+    border-top-color: $secondaryColour;
+    border-bottom-color: $secondaryColour;
+    height: 1px;
+  }
+  span, p {
+    font-size: 12px;
+    &.player-info {
+      margin: 5px 0;
+      color: $textColour;
+    }
+    .totals {
+      font-size: 18px;
+      font-weight: bold;
+      color: $secondaryColour;
+    }
+  }
+}
+
+@media (max-width: 750px) {
+  .jumbotron {
+    h1 {
+      font-size: 45px;
+    }
+  }
+}
+
+@media (max-width: 550px) {
+
+  .jumbotron {
+    padding: 10px;
+    background-color: $mainColour;
+    font-size: 35px;
+    .background-logo {
+      display: none;
+    }
+    &.player-jumbo {
+      background-image: none;
+    }
+    .player-info {
+      font-size: 10px;
+    }
+  }
+
+}

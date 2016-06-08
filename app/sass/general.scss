@@ -1,0 +1,373 @@
+@import 'variables';
+
+html, body {
+  font-family: $mainFont;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: $textColour;
+  cursor: pointer;
+}
+
+h1, h2 {
+  color: $textColour;
+  font-family: $headerFont;
+}
+
+h3 {
+  color: $secondaryColour;
+}
+
+h4 {
+  color: $secondaryColour;
+  font-weight: bold;
+}
+
+.nav-tabs > li.active {
+  > a, > a:hover, > a:visited, > a:focus {
+    border-bottom: 4px solid white;
+    margin-bottom: -2px;
+  }
+}
+
+@-webkit-keyframes fadeIn {
+  0% { opacity: 0; }
+  20% { opacity: 0; }
+  40% { opacity: 0.3; }
+  60% { opacity: 0.5; }
+  80% { opacity: 0.9; }
+  100% { opacity: 1; }
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  20% { opacity: 0; }
+  40% { opacity: 0.3; }
+  60% { opacity: 0.5; }
+  80% { opacity: 0.9; }
+  100% { opacity: 1; }
+}
+
+table.table {
+
+  &.borderless td, .borderless th {
+    border: none;
+    padding: 2px;
+    font-size: 12px;
+  }
+
+  tr {
+    &.game-drafted {
+      //
+    }
+    &.game-dropped, &.game-added {
+      opacity: 0.5;
+    }
+    td {
+      vertical-align: middle;
+    }
+  }
+
+}
+
+.hidden {
+  display: none !important;
+  visibility: hidden !important;
+}
+
+.vertical-center {
+  min-height: 100%; /* Fallback for browsers do NOT support vh unit */
+  min-height: 3vh; /* These two lines are counted as one :-)       */
+  display: flex;
+  align-items: center;
+}
+
+.manager-name {
+  color: $textColour;
+  font-size: 18px;
+  margin: 0;
+  padding: 10px 0;
+  span, a{
+    font-size: 18px;
+    font-weight: bold;
+  }
+}
+
+.master-container {
+  &.container {
+    padding: 0 0 50px 0;
+  }
+}
+
+.main-container {
+  padding: 0;
+  margin: 50px 0 0 0;
+  display: block;
+  min-height: 500px;
+}
+
+.goals-container {
+  display: inline-block;
+  color: $textColour;
+  width: 56%;
+  margin: 0;
+  padding: 0;
+}
+
+p.info-text {
+  color: $textColour;
+  font-weight: normal;
+  font-size: 16px;
+  margin: 0;
+}
+
+.info-title {
+  font-size: 14px;
+  font-weight: normal;
+  color: $secondaryLightColour;
+}
+
+.player-column {
+  a {
+    font-weight: bold;
+    font-size: 12px;
+  }
+}
+
+.btn-plus {
+  padding: 5px 10px;
+}
+
+.btn-warning {
+  padding: 5px 5px;
+}
+
+//////////////////////////////////
+
+.form-control {
+  margin-bottom: 20px;
+}
+
+.profile-pic {
+  border-radius: 50%;
+  width: 100%;
+  border: 2px solid $secondaryColour;
+  height: auto;
+}
+
+.modal-dialog {
+  .profile-pic {
+    width: 100px;
+  }
+}
+
+.green {
+  color: green;
+}
+
+.red {
+  color: red;
+}
+
+.faded {
+  opacity: .3;
+}
+
+///////////////////////////////////////
+
+.transfer-container {
+  //background-color: #B4D3FF;
+  padding: 10px;
+  overflow: auto;
+}
+
+/////////////////////////////////////// nav
+
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+  display: none !important;
+}
+
+.player-info {
+  font-size: 12px;
+  color: white;
+}
+
+.player-status {
+  font-weight: bold;
+  font-size: 14px;
+  display: inline-block;
+  width: auto;
+  padding: 5px;
+  &.dropped {
+    background-color: #C71717;
+    color: #ffffff;
+    text-decoration: blink;
+  }
+  &.drafted {
+    background-color: $secondaryColour;
+    color: #ffffff;
+    text-decoration: blink;
+  }
+  &.added {
+    background-color: #42C717;
+    color: #ffffff;
+    text-decoration: blink;
+  }
+  &.free-agent {
+    background-color: #666666;
+    color: #ffffff;
+    text-decoration: blink;
+  }
+}
+
+.player-prop {
+  font-weight: bold;
+  color: $secondaryColour;
+}
+
+.inline {
+  display: inline;
+  @media (max-width: 700px) {
+    font-size: 20px;
+  }
+}
+
+.inline-image {
+  display: inline-block;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.overflow-show {
+  overflow: auto;
+}
+
+.dropped {
+  color: #a8a8a8;
+  text-decoration: line-through;
+  a {
+    color: #a8a8a8;
+  }
+}
+
+.added {
+  color: #1f8613;
+  a {
+    color: #1f8613;
+  }
+}
+
+.big-text {
+  font-size: 14px;
+}
+
+.standard-text {
+  font-size: 12px;
+}
+
+.small-text {
+  font-size: 10px;
+}
+
+.no-padding {
+  padding: 0;
+}
+
+///////////////////////////////////////
+
+.stats-list {
+
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  background-color: rgb(242, 3, 230);
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  display: table-cell;
+
+  li {
+
+    display: inline;
+    margin: 0;
+    padding: 0 5px;
+    float: left;
+    border-right: 1px solid white;
+
+    .stat-name {
+      font-size: 20px;
+      text-align: center;
+    }
+
+    .stat-value {
+      font-size: 38px;
+      text-align: center;
+      font-weight: bold;
+    }
+
+  }
+
+}
+
+.league-img {
+
+  width: 100%;
+  height: auto;
+
+  &.liga {
+    background-image: url('../images/leagues/liga.png');
+  }
+
+  &.epl {
+    background-image: url('../images/leagues/epl.png');
+  }
+
+  &.europa {
+    background-image: url('../images/leagues/europa.png');
+  }
+
+  &.seri {
+    background-image: url('../images/leagues/seri.png');
+  }
+
+  &.chlg {
+    background-image: url('../images/leagues/chlg.png');
+  }
+
+}
+
+.panel-body {
+  padding: 0 20px;
+  .panel-body {
+    padding: 0;
+  }
+}
+
+@media (max-width: 700px) {
+
+}
+
+.fa-facebook-f:before,
+.fa-facebook:before {
+  content: "\f09a";
+}
+
+form.form {
+  padding: 0 15px;
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+///////////////////////////////////////
+
+footer {
+  width: 100%;
+  display: block;
+  text-align: center;
+  font-size: 10px;
+  //position: absolute;
+  //bottom: 0;
+}

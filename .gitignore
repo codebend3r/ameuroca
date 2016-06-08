@@ -1,0 +1,12 @@
+*.log
+*.iml
+.idea
+.brackets.json
+node_modules
+builds/
+design
+.tmp
+bower_components
+app/js/templates/
+css
+__trash
