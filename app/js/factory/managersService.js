@@ -58,6 +58,12 @@
           }
         },
 
+        players: {
+          M001: {
+            ids: [12229, 3804, 16498, 50273, 17462]
+          }
+        },
+
         /**
          * @name findPlayerInManagers
          * @description looks through all the managers and returns the matching manager if player belong to a manager
