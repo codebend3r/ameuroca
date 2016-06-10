@@ -15,7 +15,6 @@
     'ngSanitize',
     'ngStorage',
     'jsonFormatter',
-    'firebase',
     'angular.filter'
 
   ]);

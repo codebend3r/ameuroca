@@ -22,6 +22,22 @@
 			route: 'index.euro'
 		}];
 
+		$scope.copaStatsTabs = [{
+			heading: 'Goals',
+			route: 'index.copa.goals'
+		}, {
+			heading: 'Clean Sheets',
+			route: 'index.copa.cleansheets'
+		}];
+
+		$scope.euroStatsTabs = [{
+			heading: 'Goals',
+			route: 'index.copa.goals'
+		}, {
+			heading: 'Clean Sheets',
+			route: 'index.copa.cleansheets'
+		}];
+
 		var euroCupUrl = 'http://api.thescore.com/euroc/leaders?categories=Goals%2CAssists%2CClean+Sheets&season_type=regular';
 		var copaAmericaUrl = 'http://api.thescore.com/copam/leaders?categories=Goals%2CAssists%2CClean+Sheets&season_type=regular';
 

@@ -1,72 +1,71 @@
 <!DOCTYPE html>
 <html ng-app="ameuroca">
+
 <head>
 
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title ng-bind="websiteTitle">Ameuroca</title>
-  <meta name="description" content="Ameuroca 2016">
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title ng-bind="websiteTitle">Ameuroca</title>
+	<meta name="description" content="Ameuroca 2016">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
-  <link href='https://fonts.googleapis.com/css?family=Droid+Sans:400,700|Lobster|Ubuntu:400,500,700' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Droid+Sans:400,700|Lobster|Ubuntu:400,500,700' rel='stylesheet' type='text/css'>
 
-  <!-- build:css css/ameuroca.css -->
-  <link rel="stylesheet" href="bower_components/json-formatter/dist/json-formatter.css"/>
-  <link rel="stylesheet" href="bower_components/chartist/dist/chartist.min.css"/>
-  <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css"/>
-  <link rel="stylesheet" href="css/general.css"/>
-  <link rel="stylesheet" href="css/jumbotron.css"/>
-  <link rel="stylesheet" href="css/nav.css"/>
-  <link rel="stylesheet" href="css/modal.css"/>
-  <link rel="stylesheet" href="css/preloader.css"/>
-  <link rel="stylesheet" href="css/charts.css"/>
-  <link rel="stylesheet" href="css/league-sprite.css"/>
-  <!-- endbuild -->
+	<!-- build:css css/ameuroca.css -->
+	<link rel="stylesheet" href="bower_components/json-formatter/dist/json-formatter.css" />
+	<link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
+	<link rel="stylesheet" href="css/general.css" />
+	<link rel="stylesheet" href="css/jumbotron.css" />
+	<link rel="stylesheet" href="css/nav.css" />
+	<link rel="stylesheet" href="css/modal.css" />
+	<link rel="stylesheet" href="css/preloader.css" />
+	<link rel="stylesheet" href="css/charts.css" />
+	<link rel="stylesheet" href="css/league-sprite.css" />
+	<!-- endbuild -->
 
 </head>
+
 <body>
 
-<div class="container master-container">
+	<div class="container master-container">
 
-  <header></header>
-  <div class="main-container container">
-    <preloader class="page-loading"></preloader>
-    <ui-view id="ui-view"></ui-view>
-  </div>
-  <footer class="ng-cloak" ng-if="!loading">Ameuroca 2016 - Build v{{version}} | Data Synced on <b>{{lastSyncDate}}</b> from <b>{{source}}</b>
-  </footer>
+		<header></header>
+		<div class="main-container container">
+			<preloader class="page-loading"></preloader>
+			<ui-view id="ui-view"></ui-view>
+		</div>
+		<footer class="ng-cloak" ng-if="!loading">Ameuroca 2016 - Build v{{version}} | Data Synced on <b>{{lastSyncDate}}</b> from <b>{{source}}</b>
+		</footer>
 
-</div>
+	</div>
 
-<!-- build:js js/ameuroca.js -->
-<script src="bower_components/jquery/dist/jquery.js"></script>
-<script src="bower_components/angular/angular.js"></script>
-<script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
-<script src="bower_components/underscore/underscore.js"></script>
-<script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
-<script src="bower_components/angular-ui-router-tabs/src/ui-router-tabs.js"></script>
-<script src="bower_components/angular-resource/angular-resource.js"></script>
-<script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
-<script src="bower_components/ngstorage/ngStorage.js"></script>
-<script src="bower_components/angular-filter/dist/angular-filter.js"></script>
-<script src="bower_components/json-formatter/dist/json-formatter.js"></script>
-<script src="bower_components/moment/moment.js"></script>
-<script src="bower_components/firebase/firebase.js"></script>
-<script src="bower_components/angularfire/dist/angularfire.js"></script>
-<script src="bower_components/chartist/dist/chartist.js"></script>
-<script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+	<!-- build:js js/ameuroca.js -->
+	<script src="bower_components/jquery/dist/jquery.js"></script>
+	<script src="bower_components/angular/angular.js"></script>
+	<script src="bower_components/angular-filter/dist/angular-filter.js"></script>
+	<script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+	<script src="bower_components/underscore/underscore.js"></script>
+	<script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+	<script src="bower_components/angular-ui-router-tabs/src/ui-router-tabs.js"></script>
+	<script src="bower_components/angular-resource/angular-resource.js"></script>
+	<script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
+	<script src="bower_components/ngstorage/ngStorage.js"></script>
+	<script src="bower_components/json-formatter/dist/json-formatter.js"></script>
+	<script src="bower_components/moment/moment.js"></script>
+	<script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
 
-<script src="js/app.js"></script>
-<script src="js/routes.js"></script>
-<script src="js/run.js"></script>
-<script src="js/templates/templateCache.js"></script>
-<script src="js/factory/managersService.js"></script>
-<script src="js/filters/orderObjectBy.js"></script>
-<script src="js/filters/ordinal.js"></script>
-<script src="js/filters/capitilize.js"></script>
-<script src="js/controllers/appCtrl.js"></script>
-<script src="js/controllers/masterCtrl.js"></script>
-<!-- endbuild -->
+	<script src="js/app.js"></script>
+	<script src="js/routes.js"></script>
+	<script src="js/run.js"></script>
+	<script src="js/templates/templateCache.js"></script>
+	<script src="js/factory/managersService.js"></script>
+	<script src="js/filters/orderObjectBy.js"></script>
+	<script src="js/filters/ordinal.js"></script>
+	<script src="js/filters/capitilize.js"></script>
+	<script src="js/controllers/appCtrl.js"></script>
+	<script src="js/controllers/masterCtrl.js"></script>
+	<!-- endbuild -->
 
 </body>
+
 </html>
