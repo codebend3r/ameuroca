@@ -2,14 +2,14 @@
  * Created by Bouse on 02/16/2016
  */
 
-(function () {
+(function() {
 
-  'use strict';
+	'use strict';
 
-  angular.module('ameuroca')
+	angular.module('ameuroca')
 
-    .controller('masterCtrl', function ($scope, $rootScope, $log, $state, $stateParams) {
+	.controller('masterCtrl', function($scope, $rootScope, $log, $state, $stateParams) {
 
-    });
+	});
 
 })();
