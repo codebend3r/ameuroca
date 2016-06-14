@@ -10,8 +10,8 @@
 
     .config(function ($stateProvider, $urlRouterProvider) {
 
-      // $urlRouterProvider.when('', '/index');
-      // $urlRouterProvider.when('/', '/index');
+      $urlRouterProvider.when('/index/copa', '/index/copa/goals');
+      $urlRouterProvider.when('/index/euro', '/index/euro/goals');
 
       $urlRouterProvider.otherwise('/index/copa/goals');
 
