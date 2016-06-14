@@ -120,53 +120,55 @@
 		};
 
 		var range = ['2016 06 01', '2016 07 01'];
+		var position;
+		var totalPoints;
 
-		_.each(managersService.players, function(m) {
+		$scope.standings = {};
+
+		var mapLog = function(logResults) {
+
+			console.debug(logResults, $scope.standings);
+
+			_.each(logResults.data, function(game) {
+				if (position === 'G') {
+					// console.debug('goalie', game);
+				} else {
+					var scoredAGoal = game.goals !== 0;
+					var gameDate = moment(new Date(game.box_score.event.game_date));
+					var start = moment(new Date(range[0]));
+					var end = moment(new Date(range[1]));
+					var isBetween = gameDate.isBetween(start, end);
+
+					if (isBetween && scoredAGoal) {
+						// console.debug(result.data.full_name, moment(game.box_score.event.game_date).format('YYYY/MM/DD'), game.goals);
+						totalPoints += game.goals;
+						console.debug(obj.points);
+						obj.points = totalPoints;
+					}
+
+				}
+
+			});
+		};
+
+		_.each(managersService.players, function(m, key) {
+
+			$scope.standings[key] = {};
 
 			_.each(m.ids, function(playerId) {
 
 				$http.get(genericBaseUrl + playerId).then(function(result) {
 
-					var position = result.data.position_abbreviation;
-					console.debug(result.data.id, result.data.full_name, position);
+					position = result.data.position_abbreviation;
+					totalPoints = 0;
 
 					_.each(result.data.leagues, function(league) {
-
 						if (acceptedLeagueSlugs.indexOf(league.slug) !== -1) {
-
-							getPlayerLog(league.slug, playerId).then(function(logResults) {
-
-								_.each(logResults.data, function(game) {
-
-									console.debug('position', position);
-
-									if (position === 'G') {
-										console.debug('goalie', game);
-										debugger;
-
-									} else {
-
-										var scoredAGoal = game.goals !== 0;
-										var gameDate = moment(new Date(game.box_score.event.game_date));
-										var start = moment(new Date(range[0]));
-										var end = moment(new Date(range[1]));
-
-										var isBetween = gameDate.isBetween(start, end);
-
-										// console.debug('isBetween:', isBetween);
-										// console.debug('scoredAGoal:', scoredAGoal);
-										// console.debug('-----------------------');
-
-										if (isBetween && scoredAGoal) {
-											console.debug(result.data.full_name, moment(game.box_score.event.game_date).format('YYYY/MM/DD'), game.goals);
-										}
-
-									}
-
-								});
-							});
+							getPlayerLog(league.slug, playerId).then(mapLog);
 						}
 					});
+
+					// console.debug('> standings', $scope.standings);
 
 				});
 
